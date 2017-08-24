@@ -16,12 +16,15 @@
     string += "</ul>";
     return string;
   },
-  // 
-  // displaySummaryForId: function(id) {
-  //   article = this.list.getArticleFromId(id);
-  //   summaryView = new SummaryView(article);
-  //   return noteView.display();
-  // }
+
+  displaySummaryForId: function(id, data) {
+    var article = this.list.getArticleFromId(id);
+    article.setSummary(data);
+    console.log(article.getSummary());
+    console.log(data);
+    summaryView = new SummaryView(article);
+    return summaryView.display();
+  }
 };
 
 exports.HeadlinesView = HeadlinesView;

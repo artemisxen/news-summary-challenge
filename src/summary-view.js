@@ -6,7 +6,7 @@
   SummaryView.prototype = {
     display: function() {
       var article = this.article;
-      return "<div>" + article.getText() + "</div>";
+      return ("<div>" +"<h3>" + article.getWebTitle() + "</h3>"+ "</br>" + article.getSummary() + "</br>" + '<a href="' + article.getWebUrl() + '">Link</a>' +"</br></div>");
     }
   };
 

@@ -1,9 +1,9 @@
 (function(exports) {
-  var id = 0;
-  function Article(webTitle, webUrl) {
+  function Article(id, webTitle, webUrl) {
     this.webTitle = webTitle;
     this.webUrl = webUrl;
-    this.id = id++;
+    this.id = id;
+    this.summary = "";
   }
 
   Article.prototype = {
@@ -15,6 +15,12 @@
     },
     getWebUrl: function(){
       return this.webUrl;
+    },
+    setSummary: function(text) {
+      this.summary = text;
+    },
+    getSummary: function() {
+      return this.summary;
     }
 };
   exports.Article = Article;

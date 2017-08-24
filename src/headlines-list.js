@@ -11,6 +11,17 @@
 
   returnHeadlines: function() {
     return this.headlines;
+  },
+
+  getArticleFromId: function(id) {
+    headlines = this.returnHeadlines();
+    var articleToReturn;
+    headlines.forEach(function(article){
+      if(article.getId() === id) {
+        articleToReturn = article;
+      }
+    });
+    return articleToReturn;
   }
 };
 
