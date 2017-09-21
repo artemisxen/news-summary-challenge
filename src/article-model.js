@@ -3,7 +3,6 @@
     this.webTitle = webTitle;
     this.webUrl = webUrl;
     this.id = id;
-    this.summary = "";
   }
 
   Article.prototype = {

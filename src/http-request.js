@@ -2,11 +2,11 @@
   makeRequestToGuardianApi();
   var httpRequest;
 
-  function makeRequestToGuardianApi()
+  function makeRequestToGuardianApi() //api controller
   {
     httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = handleResponseFromGuardianApi;
-    httpRequest.open('GET', 'http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=http://content.guardianapis.com/news', true);
+    httpRequest.open('GET', 'http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=http://content.guardianapis.com/search?', true);
     httpRequest.send();
   }
 
@@ -22,7 +22,7 @@
     }
   }
 
-function makeRequestToAylienApi(webUrl)
+function makeRequestToAylienApi(webUrl) // controller
 {
   httpRequest = new XMLHttpRequest();
   httpRequest.onreadystatechange = handleResponseFromAylienApi;
